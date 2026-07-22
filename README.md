@@ -47,64 +47,64 @@ vim.cmd.colorscheme("zimablue-sunset")
 
 | Color | Hex | Description |
 |-------|-----|-------------|
-| <code style="background:#5BC2E7;color:#000">&nbsp;&nbsp;&nbsp;&nbsp;</code> | `#5BC2E7` | Zima Blue (PANTONE 2985 C) — primary accent |
-| <code style="background:#16B8F3;color:#000">&nbsp;&nbsp;&nbsp;&nbsp;</code> | `#16B8F3` | Zima Blue Light — special methods, headings |
-| <code style="background:#28C5F4;color:#000">&nbsp;&nbsp;&nbsp;&nbsp;</code> | `#28C5F4` | Zima Blue Bold — operators, active selection |
+| <img src="https://placehold.co/15x15/5BC2E7/5BC2E7.png" alt="#5BC2E7" width="15" height="15" /> | `#5BC2E7` | Zima Blue (PANTONE 2985 C) — primary accent |
+| <img src="https://placehold.co/15x15/16B8F3/16B8F3.png" alt="#16B8F3" width="15" height="15" /> | `#16B8F3` | Zima Blue Light — special methods, headings |
+| <img src="https://placehold.co/15x15/28C5F4/28C5F4.png" alt="#28C5F4" width="15" height="15" /> | `#28C5F4` | Zima Blue Bold — operators, active selection |
 
 ### Backgrounds
 
 | Color | Hex | Description |
 |-------|-----|-------------|
-| <code style="background:#0A0F1A;color:#fff">&nbsp;&nbsp;&nbsp;&nbsp;</code> | `#0A0F1A` | Deep space blue-black — main editor background |
-| <code style="background:#111827;color:#fff">&nbsp;&nbsp;&nbsp;&nbsp;</code> | `#111827` | Sidebars, panels, float windows |
-| <code style="background:#182340;color:#fff">&nbsp;&nbsp;&nbsp;&nbsp;</code> | `#182340` | Cursor line, hover, selection backgrounds |
-| <code style="background:#1E3555;color:#fff">&nbsp;&nbsp;&nbsp;&nbsp;</code> | `#1E3555` | Search matches, visual selection |
-| <code style="background:#0D1423;color:#fff">&nbsp;&nbsp;&nbsp;&nbsp;</code> | `#0D1423` | Line comment background |
+| <img src="https://placehold.co/15x15/0A0F1A/0A0F1A.png" alt="#0A0F1A" width="15" height="15" /> | `#0A0F1A` | Deep space blue-black — main editor background |
+| <img src="https://placehold.co/15x15/111827/111827.png" alt="#111827" width="15" height="15" /> | `#111827` | Sidebars, panels, float windows |
+| <img src="https://placehold.co/15x15/182340/182340.png" alt="#182340" width="15" height="15" /> | `#182340` | Cursor line, hover, selection backgrounds |
+| <img src="https://placehold.co/15x15/1E3555/1E3555.png" alt="#1E3555" width="15" height="15" /> | `#1E3555` | Search matches, visual selection |
+| <img src="https://placehold.co/15x15/0D1423/0D1423.png" alt="#0D1423" width="15" height="15" /> | `#0D1423` | Line comment background |
 
 ### Foregrounds
 
 | Color | Hex | Description |
 |-------|-----|-------------|
-| <code style="background:#D4D6E0;color:#000">&nbsp;&nbsp;&nbsp;&nbsp;</code> | `#D4D6E0` | Primary text |
-| <code style="background:#8B92A8;color:#000">&nbsp;&nbsp;&nbsp;&nbsp;</code> | `#8B92A8` | Secondary / dim text |
-| <code style="background:#565E78;color:#000">&nbsp;&nbsp;&nbsp;&nbsp;</code> | `#565E78` | Inactive / placeholder text |
+| <img src="https://placehold.co/15x15/D4D6E0/D4D6E0.png" alt="#D4D6E0" width="15" height="15" /> | `#D4D6E0` | Primary text |
+| <img src="https://placehold.co/15x15/8B92A8/8B92A8.png" alt="#8B92A8" width="15" height="15" /> | `#8B92A8` | Secondary / dim text |
+| <img src="https://placehold.co/15x15/565E78/565E78.png" alt="#565E78" width="15" height="15" /> | `#565E78` | Inactive / placeholder text |
 
 ### Comments
 
 | Color | Hex | Description |
 |-------|-----|-------------|
-| <code style="background:#5A6380;color:#fff">&nbsp;&nbsp;&nbsp;&nbsp;</code> | `#5A6380` | Muted blue-gray comments |
+| <img src="https://placehold.co/15x15/5A6380/5A6380.png" alt="#5A6380" width="15" height="15" /> | `#5A6380` | Muted blue-gray comments |
 
 ### UI Elements
 
 | Color | Hex | Description |
 |-------|-----|-------------|
-| <code style="background:#2E3852;color:#fff">&nbsp;&nbsp;&nbsp;&nbsp;</code> | `#2E3852` | Non-text characters, line numbers, folds |
-| <code style="background:#1E2740;color:#fff">&nbsp;&nbsp;&nbsp;&nbsp;</code> | `#1E2740` | Split borders, float borders |
+| <img src="https://placehold.co/15x15/2E3852/2E3852.png" alt="#2E3852" width="15" height="15" /> | `#2E3852` | Non-text characters, line numbers, folds |
+| <img src="https://placehold.co/15x15/1E2740/1E2740.png" alt="#1E2740" width="15" height="15" /> | `#1E2740` | Split borders, float borders |
 
 ### Syntax Colors
 
 | Color | Hex | Description |
 |-------|-----|-------------|
-| <code style="background:#61AFEF;color:#000">&nbsp;&nbsp;&nbsp;&nbsp;</code> | `#61AFEF` | Blue — keywords, control flow, types |
-| <code style="background:#56B6C2;color:#000">&nbsp;&nbsp;&nbsp;&nbsp;</code> | `#56B6C2` | Cyan — support types, special characters |
-| <code style="background:#98C379;color:#000">&nbsp;&nbsp;&nbsp;&nbsp;</code> | `#98C379` | Green — strings, additions, success |
-| <code style="background:#E5C07B;color:#000">&nbsp;&nbsp;&nbsp;&nbsp;</code> | `#E5C07B` | Yellow — numbers, modifications, warnings |
-| <code style="background:#D19A66;color:#000">&nbsp;&nbsp;&nbsp;&nbsp;</code> | `#D19A66` | Orange — debug, log levels, danger |
-| <code style="background:#E06C75;color:#000">&nbsp;&nbsp;&nbsp;&nbsp;</code> | `#E06C75` | Red — errors, deletions, diffs |
-| <code style="background:#C678DD;color:#000">&nbsp;&nbsp;&nbsp;&nbsp;</code> | `#C678DD` | Purple — preprocessor, special keywords |
+| <img src="https://placehold.co/15x15/61AFEF/61AFEF.png" alt="#61AFEF" width="15" height="15" /> | `#61AFEF` | Blue — keywords, control flow, types |
+| <img src="https://placehold.co/15x15/56B6C2/56B6C2.png" alt="#56B6C2" width="15" height="15" /> | `#56B6C2` | Cyan — support types, special characters |
+| <img src="https://placehold.co/15x15/98C379/98C379.png" alt="#98C379" width="15" height="15" /> | `#98C379` | Green — strings, additions, success |
+| <img src="https://placehold.co/15x15/E5C07B/E5C07B.png" alt="#E5C07B" width="15" height="15" /> | `#E5C07B` | Yellow — numbers, modifications, warnings |
+| <img src="https://placehold.co/15x15/D19A66/D19A66.png" alt="#D19A66" width="15" height="15" /> | `#D19A66` | Orange — debug, log levels, danger |
+| <img src="https://placehold.co/15x15/E06C75/E06C75.png" alt="#E06C75" width="15" height="15" /> | `#E06C75` | Red — errors, deletions, diffs |
+| <img src="https://placehold.co/15x15/C678DD/C678DD.png" alt="#C678DD" width="15" height="15" /> | `#C678DD` | Purple — preprocessor, special keywords |
 
 ### Scene-Inspired Accents
 
 | Color | Hex | Description |
 |-------|-----|-------------|
-| <code style="background:#4A90D9;color:#000">&nbsp;&nbsp;&nbsp;&nbsp;</code> | `#4A90D9` | Nebula Blue — secondary UI elements |
-| <code style="background:#7C5FBF;color:#000">&nbsp;&nbsp;&nbsp;&nbsp;</code> | `#7C5FBF` | Nebula Purple — space keywords |
-| <code style="background:#FF8C42;color:#000">&nbsp;&nbsp;&nbsp;&nbsp;</code> | `#FF8C42` | Sunset Orange — warm warnings |
-| <code style="background:#FF5370;color:#000">&nbsp;&nbsp;&nbsp;&nbsp;</code> | `#FF5370` | Lava Red — bright errors |
-| <code style="background:#5FD7A0;color:#000">&nbsp;&nbsp;&nbsp;&nbsp;</code> | `#5FD7A0` | Aurora Green — success / UI |
-| <code style="background:#2E3440;color:#fff">&nbsp;&nbsp;&nbsp;&nbsp;</code> | `#2E3440` | Volcanic Gray — UI alternative |
-| <code style="background:#ECEFF4;color:#000">&nbsp;&nbsp;&nbsp;&nbsp;</code> | `#ECEFF4` | Star White — bright foreground emphasis |
+| <img src="https://placehold.co/15x15/4A90D9/4A90D9.png" alt="#4A90D9" width="15" height="15" /> | `#4A90D9` | Nebula Blue — secondary UI elements |
+| <img src="https://placehold.co/15x15/7C5FBF/7C5FBF.png" alt="#7C5FBF" width="15" height="15" /> | `#7C5FBF` | Nebula Purple — space keywords |
+| <img src="https://placehold.co/15x15/FF8C42/FF8C42.png" alt="#FF8C42" width="15" height="15" /> | `#FF8C42` | Sunset Orange — warm warnings |
+| <img src="https://placehold.co/15x15/FF5370/FF5370.png" alt="#FF5370" width="15" height="15" /> | `#FF5370` | Lava Red — bright errors |
+| <img src="https://placehold.co/15x15/5FD7A0/5FD7A0.png" alt="#5FD7A0" width="15" height="15" /> | `#5FD7A0` | Aurora Green — success / UI |
+| <img src="https://placehold.co/15x15/2E3440/2E3440.png" alt="#2E3440" width="15" height="15" /> | `#2E3440` | Volcanic Gray — UI alternative |
+| <img src="https://placehold.co/15x15/ECEFF4/ECEFF4.png" alt="#ECEFF4" width="15" height="15" /> | `#ECEFF4` | Star White — bright foreground emphasis |
 
 ## Installation
 
