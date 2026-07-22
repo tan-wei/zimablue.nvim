@@ -1,0 +1,14 @@
+# Lua
+*.lua luac.out
+
+# LSP / IDE
+.luarc.json
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Git
+.git/
