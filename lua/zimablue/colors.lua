@@ -34,6 +34,9 @@ M["default"] = {
   comment_bg      = "#0D1423",
 
   nontext         = "#2E3852",
+  line_nr         = "#565E78",
+  line_nr_above   = "#5C89B8",
+  line_nr_below   = "#8A7258",
   border          = "#24304D",
 
   zima_blue       = "#5BC2E7",
@@ -85,6 +88,9 @@ M["sunset"] = {
   comment_bg      = "#140F0C",
 
   nontext         = "#3A2E22",
+  line_nr         = "#6A5E52",
+  line_nr_above   = "#76A8D2",
+  line_nr_below   = "#B2835B",
   border          = "#3A2818",
 
   zima_blue       = "#6BC8F0",
@@ -135,6 +141,9 @@ M["pool"] = {
   comment_bg      = "#0A1418",
 
   nontext         = "#284048",
+  line_nr         = "#506268",
+  line_nr_above   = "#5A9FBE",
+  line_nr_below   = "#9A8162",
   border          = "#1E3238",
 
   zima_blue       = "#50C8E8",
@@ -185,6 +194,9 @@ M["volcano"] = {
   comment_bg      = "#120A0A",
 
   nontext         = "#3A2018",
+  line_nr         = "#68504A",
+  line_nr_above   = "#6C96B8",
+  line_nr_below   = "#C17A4C",
   border          = "#3A1A10",
 
   zima_blue       = "#60B8E0",
@@ -235,6 +247,9 @@ M["storm"] = {
   comment_bg      = "#0A1016",
 
   nontext         = "#24303C",
+  line_nr         = "#485260",
+  line_nr_above   = "#527F9A",
+  line_nr_below   = "#8A6F58",
   border          = "#1A2634",
 
   zima_blue       = "#4AA8C8",

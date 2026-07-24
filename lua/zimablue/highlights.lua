@@ -32,9 +32,9 @@ function M.setup(palette, hl, fg, bold, italic, styles, config)
   hl("CursorColumn", { bg = palette.bg_highlight })
   hl("CursorLine",   { bg = palette.bg_highlight })
   hl("CursorLineNr", { fg = palette.zima_blue, bg = palette.bg_highlight, bold = true })
-  hl("LineNr",       { fg = palette.nontext })
-  hl("LineNrAbove",  { fg = palette.nontext })
-  hl("LineNrBelow",  { fg = palette.nontext })
+  hl("LineNr",       { fg = palette.line_nr or palette.nontext })
+  hl("LineNrAbove",  { fg = palette.line_nr_above or palette.line_nr or palette.nontext })
+  hl("LineNrBelow",  { fg = palette.line_nr_below or palette.line_nr or palette.nontext })
   hl("Cursor",       { bg = palette.zima_blue_bold })
   hl("lCursor",      { bg = palette.zima_blue_bold })
   hl("CursorIM",     { bg = palette.zima_blue_bold })
@@ -219,8 +219,6 @@ function M.setup(palette, hl, fg, bold, italic, styles, config)
   -- ======================================================================
   -- Syntax fallback groups (for older plugins / no treesitter)
   -- ======================================================================
-  hl("Normal",     { fg = palette.fg })
-
   -- Keywords / Statements
   hl("Statement",  { fg = palette.blue, bold = bold() })
   hl("Keyword",    { fg = palette.purple })

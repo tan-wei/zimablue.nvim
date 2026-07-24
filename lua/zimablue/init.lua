@@ -129,7 +129,12 @@ function M.setup(opts)
   require("zimablue.plugins").setup(palette, hl, fg, bold, italic, styles, config)
 
   -- Apply on_highlights callback
-  config.on_highlights({}, palette)
+  local highlights = {}
+  config.on_highlights(highlights, palette)
+
+  for group, value in pairs(highlights) do
+    hl(group, value)
+  end
 end
 
 return M

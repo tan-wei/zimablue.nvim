@@ -173,6 +173,8 @@ require("zimablue").setup({
   on_colors = function(colors)
     -- Override any color in the palette
     colors.zima_blue = "#16B8F3"
+    colors.line_nr_above = "#5C89B8"
+    colors.line_nr_below = "#8A7258"
   end,
   on_highlights = function(highlights, colors)
     -- Set or override any highlight group
