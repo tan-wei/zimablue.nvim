@@ -8,6 +8,42 @@ The exact hex code for Zima Blue is <code style="background:#5BC2E7;color:#000;p
 
 </div>
 
+<table width="100%">
+  <tr>
+    <th>Zimablue Pool</th>
+    <th>Zimablue Storm</th>
+  </tr>
+  <tr>
+    <td width="50%">
+      <img src="https://github.com/tan-wei/zimablue.nvim/raw/master/snapshots/zimablue-pool.png" />
+    </td>
+    <td width="50%">
+      <img src="https://github.com/tan-wei/zimablue.nvim/raw/master/snapshots/zimablue-storm.png" />
+    </td>
+  </tr>
+  <tr>
+    <th>Zimablue Sunset</th>
+    <th>Zimablue Volcano</th>
+  </tr>
+  <tr>
+    <td width="50%">
+      <img src="https://github.com/tan-wei/zimablue.nvim/raw/master/snapshots/zimablue-sunset.png" />
+    </td>
+    <td width="50%">
+      <img src="https://github.com/tan-wei/zimablue.nvim/raw/master/snapshots/zimablue-volcano.png" />
+    </td>
+  </tr>
+  <tr>
+    <th>Zimablue</th>
+  </tr>
+  <tr>
+    <td width="100%">
+      <img src="https://github.com/tan-wei/zimablue.nvim/raw/master/snapshots/zimablue.png" />
+    </td>
+  </tr>
+</table>
+
+
 ## Inspiration
 
 In the episode *Zima Blue*, the mysterious artist Zima reveals his origin as a small pool-cleaning robot, and the blue tile that defined his existence becomes the symbol of his journey — from simple function to cosmic art, and back again.
@@ -189,7 +225,7 @@ MIT
 
 ## TODO
 
-- [ ] **Screenshots** — Add side-by-side screenshots of each variant (default, sunset, pool, volcano, storm) showing syntax highlighting in common languages
+- [x] **Screenshots** — Add side-by-side screenshots of each variant (default, sunset, pool, volcano, storm) showing syntax highlighting in common languages
 - [ ] **More plugin support** — Add highlight groups for community-requested plugins
 
 ## Credits
