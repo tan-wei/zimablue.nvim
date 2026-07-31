@@ -65,6 +65,8 @@ This colorscheme captures that atmosphere: a deep, dark void of space punctuated
 - LSP semantic token highlighting (`@lsp.type.*`, `@lsp.mod.*`)
 - Plugin support: Telescope, WhichKey, Neo-tree/NvimTree, Gitsigns, Lazy, Noice, DAP, Blink/Cmp, and more
 - Terminal ANSI 16-color support (per variant)
+- Generated CUI/TUI/terminal themes for 34 tools
+- Vim help docs via `:help zimablue.nvim`
 - Configurable transparent background, dim inactive windows, italics, bold, and style overrides
 - `on_colors` and `on_highlights` callbacks for complete customization
 
@@ -227,6 +229,100 @@ require("zimablue").setup({
 })
 ```
 
+## Supported Plugins
+
+zimablue.nvim includes highlight groups for common editor, LSP, completion, Git, testing, Markdown, AI completion, terminal UI, and navigation plugins.
+
+| Category | Plugins |
+|----------|---------|
+| Completion | blink.cmp, nvim-cmp, Codeium, Copilot, Supermaven |
+| File trees and navigation | Neo-tree, NvimTree, Aerial, Navic, Telescope, FzfLua, Snacks picker, MiniPick |
+| Git | Gitsigns, vim-gitgutter, Neogit, Octo, Diffview-style groups |
+| Diagnostics and LSP UI | ALE, Trouble, Noice, Notify, Lspsaga, Illuminate |
+| Debug and test | nvim-dap, Dap UI, Neotest, Overseer |
+| Statusline and buffers | lualine, bufferline.nvim, barbar.nvim, mini.statusline |
+| Startup and dashboard | alpha-nvim, dashboard-nvim, snacks.nvim dashboard, mini.starter |
+| Motion and search | Flash, Hop, Leap, Sneak, GrugFar |
+| Indent and context | indent-blankline.nvim, indentmini.nvim, mini.indentscope, Treesitter Context |
+| Markdown and writing | render-markdown.nvim, headlines.nvim, Vimwiki |
+| UI helpers | WhichKey, Lazy.nvim, Scrollbar, Rainbow Delimiters, glyph-palette.nvim, Yanky |
+| Terminal | ToggleTerm |
+| Mini.nvim modules | animate, clue, completion, cursorword, deps, diff, files, hipatterns, icons, jump, jump2d, map, notify, pick, starter, statusline, surround, tabline, test, trailspace |
+| Misc | Sidekick, SnipRun |
+
+## Extras
+
+Generated themes are available under `extras/` for each variant: `zimablue`, `zimablue-sunset`, `zimablue-pool`, `zimablue-volcano`, and `zimablue-storm`.
+
+| Tool | Path |
+|------|------|
+| Aerc | `extras/aerc/` |
+| Aider | `extras/aider/` |
+| Alacritty | `extras/alacritty/` |
+| Btop | `extras/btop/` |
+| Delta | `extras/delta/` |
+| eza | `extras/eza/` |
+| Fish | `extras/fish/` |
+| Fish themes | `extras/fish_themes/` |
+| Foot | `extras/foot/` |
+| Fzf | `extras/fzf/` |
+| Ghostty | `extras/ghostty/` |
+| GitUI | `extras/gitui/` |
+| GNOME Terminal | `extras/gnome_terminal/` |
+| Helix | `extras/helix/` |
+| iSH | `extras/ish/` |
+| Kitty | `extras/kitty/` |
+| Konsole | `extras/konsole/` |
+| Lazygit | `extras/lazygit/` |
+| process-compose | `extras/process_compose/` |
+| QTerminal | `extras/qterminal/` |
+| st | `extras/st/` |
+| Spotify Player | `extras/spotify_player/` |
+| Terminator | `extras/terminator/` |
+| Termux | `extras/termux/` |
+| Tilix | `extras/tilix/` |
+| Tmux | `extras/tmux/` |
+| Vim | `extras/vim/` |
+| WezTerm | `extras/wezterm/` |
+| Windows Terminal | `extras/windows_terminal/` |
+| Xfce Terminal | `extras/xfceterm/` |
+| Xresources | `extras/xresources/` |
+| Yazi | `extras/yazi/` |
+| Zathura | `extras/zathura/` |
+| Zellij | `extras/zellij/` |
+
+Regenerate extras after changing palette values:
+
+```sh
+nvim --headless -u NONE -l scripts/generate_extras.lua
+```
+
+## Development
+
+Run the spec suite:
+
+```sh
+nvim --headless -u NONE -l tests/minit.lua
+```
+
+Run the smoke test:
+
+```sh
+nvim --headless -u NONE -l tests/smoke.lua
+```
+
+Check generated extras:
+
+```sh
+nvim --headless -u NONE -l scripts/generate_extras.lua --check
+```
+
+Check help docs:
+
+```sh
+nvim --headless -u NONE --cmd 'set rtp+=.' --cmd 'helptags doc' --cmd 'qa!'
+```
+
 ## License
 
 MIT
@@ -234,7 +330,9 @@ MIT
 ## TODO
 
 - [x] **Screenshots** — Add side-by-side screenshots of each variant (default, sunset, pool, volcano, storm) showing syntax highlighting in common languages
-- [ ] **More plugin support** — Add highlight groups for community-requested plugins
+- [x] **Generated extras** — Add palette-driven themes for terminal and CUI/TUI tools
+- [x] **Tests and CI** — Add specs, smoke tests, generated extras checks, and help docs checks
+- [ ] **More plugin support** — Add highlight groups for community-requested plugins as requests come in
 
 ## Credits
 
