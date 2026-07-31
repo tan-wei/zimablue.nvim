@@ -188,29 +188,30 @@ end
 
 local function json(name, palette)
   local normal, bright = ansi(palette)
-  return vim.fn.json_encode({
-    name = name,
-    background = palette.bg,
-    foreground = palette.fg,
-    cursorColor = palette.zima_blue,
-    selectionBackground = palette.bg_visual,
-    black = normal[1],
-    red = normal[2],
-    green = normal[3],
-    yellow = normal[4],
-    blue = normal[5],
-    purple = normal[6],
-    cyan = normal[7],
-    white = normal[8],
-    brightBlack = bright[1],
-    brightRed = bright[2],
-    brightGreen = bright[3],
-    brightYellow = bright[4],
-    brightBlue = bright[5],
-    brightPurple = bright[6],
-    brightCyan = bright[7],
-    brightWhite = bright[8],
-  }) .. "\n"
+  local parts = {
+    string.format('"name": "%s"', name),
+    string.format('"background": "%s"', palette.bg),
+    string.format('"foreground": "%s"', palette.fg),
+    string.format('"cursorColor": "%s"', palette.zima_blue),
+    string.format('"selectionBackground": "%s"', palette.bg_visual),
+    string.format('"black": "%s"', normal[1]),
+    string.format('"red": "%s"', normal[2]),
+    string.format('"green": "%s"', normal[3]),
+    string.format('"yellow": "%s"', normal[4]),
+    string.format('"blue": "%s"', normal[5]),
+    string.format('"purple": "%s"', normal[6]),
+    string.format('"cyan": "%s"', normal[7]),
+    string.format('"white": "%s"', normal[8]),
+    string.format('"brightBlack": "%s"', bright[1]),
+    string.format('"brightRed": "%s"', bright[2]),
+    string.format('"brightGreen": "%s"', bright[3]),
+    string.format('"brightYellow": "%s"', bright[4]),
+    string.format('"brightBlue": "%s"', bright[5]),
+    string.format('"brightPurple": "%s"', bright[6]),
+    string.format('"brightCyan": "%s"', bright[7]),
+    string.format('"brightWhite": "%s"', bright[8]),
+  }
+  return "{" .. table.concat(parts, ", ") .. "}\n"
 end
 
 local function extra(tool, name, palette, key)
