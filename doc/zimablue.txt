@@ -1,0 +1,129 @@
+*zimablue.nvim*  A dark Neovim colorscheme inspired by Zima Blue
+
+===============================================================================
+CONTENTS                                                        *zimablue-contents*
+
+1. Introduction                                             |zimablue-introduction|
+2. Usage                                                    |zimablue-usage|
+3. Configuration                                            |zimablue-configuration|
+4. Variants                                                 |zimablue-variants|
+5. Customization                                            |zimablue-customization|
+
+===============================================================================
+INTRODUCTION                                                *zimablue-introduction*
+
+zimablue.nvim is a dark Neovim colorscheme inspired by the iconic Zima Blue
+color from Love, Death & Robots.
+
+The canonical accent color is #5BC2E7.
+
+===============================================================================
+USAGE                                                               *zimablue-usage*
+
+Load the default variant: >lua
+
+  vim.cmd.colorscheme("zimablue")
+
+<
+Load a specific variant directly: >vim
+
+  colorscheme zimablue-sunset
+  colorscheme zimablue-pool
+  colorscheme zimablue-volcano
+  colorscheme zimablue-storm
+
+<
+===============================================================================
+CONFIGURATION                                               *zimablue-configuration*
+
+Call setup before loading the colorscheme: >lua
+
+  require("zimablue").setup({
+    transparent = false,
+    terminal_colors = true,
+    dim_inactive = false,
+    italic = true,
+    bold = true,
+  })
+
+  vim.cmd.colorscheme("zimablue")
+
+<
+Available options: >lua
+
+  {
+    variant = "default",      -- default, sunset, pool, volcano, storm
+    transparent = false,      -- disable background colors
+    terminal_colors = true,   -- set g:terminal_color_0 through _15
+    dim_inactive = false,     -- dim inactive windows
+    italic = true,            -- default italic style for comments/keywords
+    bold = true,              -- default bold style for selected groups
+    styles = {},              -- syntax style overrides
+    on_colors = function(colors) end,
+    on_highlights = function(highlights, colors) end,
+  }
+
+<
+The `variant` option is used when loading the default colorscheme entrypoint: >lua
+
+  require("zimablue").setup({ variant = "pool" })
+  vim.cmd.colorscheme("zimablue")
+
+<
+This loads `zimablue-pool`.
+
+===============================================================================
+VARIANTS                                                       *zimablue-variants*
+
+                                                          *zimablue-default*
+zimablue
+  Deep space. Dark blue-black void with classic Zima Blue accents.
+
+                                                          *zimablue-sunset*
+zimablue-sunset
+  Golden horizon. Warm orange-gold tones against dusk.
+
+                                                          *zimablue-pool*
+zimablue-pool
+  The tiled swimming pool. Teal water and pale ceramic reflections.
+
+                                                          *zimablue-volcano*
+zimablue-volcano
+  Volcanic eruption. Lava reds, molten oranges, and black rock.
+
+                                                          *zimablue-storm*
+zimablue-storm
+  Abyssal ocean depths. Moody teals, deep grays, and foam white.
+
+===============================================================================
+CUSTOMIZATION                                           *zimablue-customization*
+
+Style overrides: >lua
+
+  require("zimablue").setup({
+    styles = {
+      comments = { italic = true },
+      keywords = { italic = true },
+      functions = { bold = true },
+      variables = {},
+    },
+  })
+
+<
+Color and highlight callbacks: >lua
+
+  require("zimablue").setup({
+    on_colors = function(colors)
+      colors.zima_blue = "#16B8F3"
+    end,
+    on_highlights = function(highlights, colors)
+      highlights.Normal = { fg = colors.fg, bg = colors.bg }
+    end,
+  })
+
+<
+The on_highlights callback receives the generated highlight table before any
+groups are applied, so existing groups can be inspected or overridden.
+
+===============================================================================
+vim:tw=78:ts=8:ft=help:norl:
