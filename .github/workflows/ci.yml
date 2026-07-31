@@ -1,0 +1,36 @@
+name: CI
+
+on:
+  push:
+    branches: [master, main]
+  pull_request:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    strategy:
+      fail-fast: false
+      matrix:
+        neovim: [stable, nightly]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: rhysd/action-setup-vim@v1
+        with:
+          neovim: true
+          version: ${{ matrix.neovim }}
+      - name: Run specs
+        run: nvim --headless -u NONE -l tests/minit.lua
+      - name: Run smoke tests
+        run: nvim --headless -u NONE -l tests/smoke.lua
+      - name: Check generated extras
+        run: nvim --headless -u NONE -l scripts/generate_extras.lua --check
+      - name: Check help docs
+        run: nvim --headless -u NONE --cmd 'set rtp+=.' --cmd 'helptags doc' --cmd 'qa!'
