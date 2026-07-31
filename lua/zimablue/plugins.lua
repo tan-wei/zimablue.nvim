@@ -92,6 +92,18 @@ function M.setup(palette, hl, fg, bold, italic, styles, config)
   hl("GitSignsChangeNr", { fg = palette.yellow })
   hl("GitSignsDeleteNr", { fg = palette.red })
 
+  hl("GitGutterAdd",          { fg = palette.green })
+  hl("GitGutterChange",       { fg = palette.yellow })
+  hl("GitGutterDelete",       { fg = palette.red })
+  hl("GitGutterChangeDelete", { fg = palette.orange })
+
+  hl("ALEErrorSign",   { fg = palette.red })
+  hl("ALEWarningSign", { fg = palette.orange })
+  hl("ALEInfoSign",    { fg = palette.blue })
+  hl("ALEError",       { undercurl = true, sp = palette.red })
+  hl("ALEWarning",     { undercurl = true, sp = palette.orange })
+  hl("ALEInfo",        { undercurl = true, sp = palette.blue })
+
   -- ======================================================================
   -- Lazy.nvim
   -- ======================================================================
@@ -164,14 +176,67 @@ function M.setup(palette, hl, fg, bold, italic, styles, config)
   hl("SneakMatch",    { fg = palette.zima_blue_bold, bold = true })
   hl("SneakScope",    { bg = palette.bg_highlight })
 
+  hl("LeapBackdrop",       { fg = palette.fg_idle })
+  hl("LeapMatch",          { fg = palette.zima_blue_bold, bold = true })
+  hl("LeapLabelPrimary",   { fg = palette.bg, bg = palette.zima_blue, bold = true })
+  hl("LeapLabelSecondary", { fg = palette.bg, bg = palette.blue, bold = true })
+
   -- ======================================================================
   -- Mini plugins
   -- ======================================================================
+  hl("MiniAnimateCursor",      { reverse = true, nocombine = true })
+  hl("MiniClueBorder",         { fg = palette.zima_blue, bg = palette.bg_alt })
+  hl("MiniClueDescGroup",      { fg = palette.blue })
+  hl("MiniClueDescSingle",     { fg = palette.fg })
+  hl("MiniClueNextKey",        { fg = palette.zima_blue, bold = true })
+  hl("MiniCompletionActiveParameter", { underline = true })
   hl("MiniStatuslineDevinfo",  { fg = palette.fg_dim, bg = palette.bg_alt })
   hl("MiniStatuslineFileinfo", { fg = palette.fg, bg = palette.bg_alt })
   hl("MiniStatuslineFilename", { fg = palette.zima_blue, bg = palette.bg_alt })
+  hl("MiniStatuslineModeNormal",  { fg = palette.bg, bg = palette.zima_blue, bold = true })
+  hl("MiniStatuslineModeInsert",  { fg = palette.bg, bg = palette.green, bold = true })
+  hl("MiniStatuslineModeVisual",  { fg = palette.bg, bg = palette.purple, bold = true })
+  hl("MiniStatuslineModeReplace", { fg = palette.bg, bg = palette.red, bold = true })
+  hl("MiniStatuslineModeCommand", { fg = palette.bg, bg = palette.yellow, bold = true })
   hl("MiniIndentscopeSymbol",  { fg = palette.zima_blue })
   hl("MiniCursorword",         { bg = palette.bg_highlight })
+  hl("MiniCursorwordCurrent",  { bg = palette.bg_highlight })
+  hl("MiniDepsTitle",          { fg = palette.zima_blue, bold = true })
+  hl("MiniDepsChangeAdded",    { fg = palette.green })
+  hl("MiniDepsChangeRemoved",  { fg = palette.red })
+  hl("MiniDiffSignAdd",        { fg = palette.green })
+  hl("MiniDiffSignChange",     { fg = palette.yellow })
+  hl("MiniDiffSignDelete",     { fg = palette.red })
+  hl("MiniFilesNormal",        { fg = palette.fg, bg = palette.bg_alt })
+  hl("MiniFilesBorder",        { fg = palette.zima_blue, bg = palette.bg_alt })
+  hl("MiniFilesCursorLine",    { bg = palette.bg_highlight })
+  hl("MiniHipatternsFixme",    { fg = palette.bg, bg = palette.red, bold = true })
+  hl("MiniHipatternsHack",     { fg = palette.bg, bg = palette.orange, bold = true })
+  hl("MiniHipatternsNote",     { fg = palette.bg, bg = palette.blue, bold = true })
+  hl("MiniHipatternsTodo",     { fg = palette.bg, bg = palette.zima_blue, bold = true })
+  hl("MiniIconsAzure",         { fg = palette.blue })
+  hl("MiniIconsCyan",          { fg = palette.cyan })
+  hl("MiniIconsGreen",         { fg = palette.green })
+  hl("MiniIconsGrey",          { fg = palette.fg_dim })
+  hl("MiniIconsOrange",        { fg = palette.orange })
+  hl("MiniIconsPurple",        { fg = palette.purple })
+  hl("MiniIconsRed",           { fg = palette.red })
+  hl("MiniIconsYellow",        { fg = palette.yellow })
+  hl("MiniJump",               { fg = palette.bg, bg = palette.zima_blue, bold = true })
+  hl("MiniJump2dSpot",         { fg = palette.bg, bg = palette.zima_blue, bold = true })
+  hl("MiniMapNormal",          { fg = palette.fg_dim, bg = palette.bg_alt })
+  hl("MiniNotifyNormal",       { fg = palette.fg, bg = palette.bg_alt })
+  hl("MiniPickNormal",         { fg = palette.fg, bg = palette.bg_alt })
+  hl("MiniPickBorder",         { fg = palette.zima_blue, bg = palette.bg_alt })
+  hl("MiniStarterHeader",      { fg = palette.zima_blue, bold = true })
+  hl("MiniSurround",           { fg = palette.bg, bg = palette.zima_blue, bold = true })
+  hl("MiniTablineCurrent",     { fg = palette.bg, bg = palette.zima_blue, bold = true })
+  hl("MiniTestPass",           { fg = palette.green, bold = true })
+  hl("MiniTestFail",           { fg = palette.red, bold = true })
+  hl("MiniTrailspace",         { bg = palette.red })
+
+  hl("IndentLine",        { fg = palette.bg_highlight, nocombine = true })
+  hl("IndentLineCurrent", { fg = palette.zima_blue, nocombine = true })
 
   -- ======================================================================
   -- Treesitter context
@@ -211,6 +276,13 @@ function M.setup(palette, hl, fg, bold, italic, styles, config)
   hl("CmpItemKindCopilot",     { fg = palette.aurora_green })
   hl("CmpItemKindSupermaven",  { fg = palette.aurora_green })
 
+  hl("CodeiumSuggestion",    { fg = palette.fg_idle, italic = true })
+  hl("CodeiumAnnotation",    { fg = palette.comment })
+  hl("CopilotSuggestion",    { fg = palette.fg_idle, italic = true })
+  hl("CopilotAnnotation",    { fg = palette.comment })
+  hl("SupermavenSuggestion", { fg = palette.fg_idle, italic = true })
+  hl("SupermavenAnnotation", { fg = palette.comment })
+
   -- ======================================================================
   -- Blink.cmp
   -- ======================================================================
@@ -234,6 +306,15 @@ function M.setup(palette, hl, fg, bold, italic, styles, config)
   -- bufferline.nvim
   -- ======================================================================
   hl("BufferLineIndicatorSelected", { fg = palette.zima_blue })
+
+  hl("BufferCurrent",       { fg = palette.fg, bg = palette.bg_alt })
+  hl("BufferCurrentIndex",  { fg = palette.zima_blue, bg = palette.bg_alt })
+  hl("BufferCurrentMod",    { fg = palette.yellow, bg = palette.bg_alt })
+  hl("BufferCurrentSign",   { fg = palette.zima_blue, bg = palette.bg_alt })
+  hl("BufferVisible",       { fg = palette.fg_dim, bg = palette.bg })
+  hl("BufferInactive",      { fg = palette.fg_idle, bg = palette.bg })
+  hl("BufferInactiveMod",   { fg = palette.orange, bg = palette.bg })
+  hl("BufferInactiveSign",  { fg = palette.border, bg = palette.bg })
 
   -- ======================================================================
   -- trouble.nvim
@@ -276,6 +357,11 @@ function M.setup(palette, hl, fg, bold, italic, styles, config)
   hl("NeotestTest",        { fg = palette.fg })
   hl("NeotestNamespace",   { fg = palette.fg_dim })
 
+  hl("SagaNormal",          { fg = palette.fg, bg = palette.bg_alt })
+  hl("SagaBorder",          { fg = palette.zima_blue, bg = palette.bg_alt })
+  hl("SagaTitle",           { fg = palette.zima_blue_light, bold = true })
+  hl("LspSagaBorderTitle",  { fg = palette.zima_blue_light, bold = true })
+
   -- ======================================================================
   -- HARPOON
   -- ======================================================================
@@ -310,6 +396,15 @@ function M.setup(palette, hl, fg, bold, italic, styles, config)
   hl("AerialLine",   { bg = palette.bg_highlight })
   hl("AerialGuide",  { fg = palette.border })
 
+  hl("Headline1", { fg = palette.zima_blue, bg = palette.bg_highlight, bold = true })
+  hl("Headline2", { fg = palette.blue, bg = palette.bg_highlight, bold = true })
+  hl("Headline3", { fg = palette.purple, bg = palette.bg_highlight, bold = true })
+  hl("Headline4", { fg = palette.cyan, bg = palette.bg_highlight, bold = true })
+  hl("Headline5", { fg = palette.green, bg = palette.bg_highlight, bold = true })
+  hl("Headline6", { fg = palette.fg_dim, bg = palette.bg_highlight, bold = true })
+  hl("CodeBlock", { bg = palette.bg_alt })
+  hl("Dash",      { fg = palette.sunset_orange })
+
   -- ======================================================================
   -- vim-illuminate
   -- ======================================================================
@@ -341,6 +436,21 @@ function M.setup(palette, hl, fg, bold, italic, styles, config)
   hl("OctoIssueOpen",   { fg = palette.green })
   hl("OctoIssueClosed", { fg = palette.purple })
   hl("OctoIssueMerged", { fg = palette.purple })
+
+  hl("GlyphPalette1", { fg = palette.red })
+  hl("GlyphPalette2", { fg = palette.green })
+  hl("GlyphPalette3", { fg = palette.yellow })
+  hl("GlyphPalette4", { fg = palette.blue })
+  hl("GlyphPalette6", { fg = palette.cyan })
+  hl("GlyphPalette7", { fg = palette.fg })
+  hl("GlyphPalette9", { fg = palette.lava_red })
+
+  hl("VimwikiHeader1", { fg = palette.zima_blue, bold = true })
+  hl("VimwikiHeader2", { fg = palette.blue, bold = true })
+  hl("VimwikiHeader3", { fg = palette.purple, bold = true })
+  hl("VimwikiHeader4", { fg = palette.cyan, bold = true })
+  hl("VimwikiLink",    { fg = palette.blue, underline = true })
+  hl("VimwikiList",    { fg = palette.sunset_orange })
 
   -- ======================================================================
   -- grug-far.nvim
@@ -416,6 +526,11 @@ function M.setup(palette, hl, fg, bold, italic, styles, config)
   hl("SnacksDashboardSpecial",    { fg = palette.purple })
   hl("SnacksIndent",              { fg = palette.bg_highlight, nocombine = true })
   hl("SnacksIndentScope",         { fg = palette.zima_blue, nocombine = true })
+
+  hl("SidekickNormal", { fg = palette.fg, bg = palette.bg_alt })
+  hl("SidekickBorder", { fg = palette.zima_blue, bg = palette.bg_alt })
+  hl("SidekickTitle",  { fg = palette.zima_blue_light, bold = true })
+  hl("SidekickQuery",  { fg = palette.zima_blue })
 
   -- ======================================================================
   -- TOGGLE TERM / Floating Terminal

@@ -6,4 +6,4 @@
 vim.cmd("set background=dark")
 vim.g.colors_name = "zimablue-volcano"
 
-require("zimablue").setup({ variant = "volcano" })
+require("zimablue").setup({ _variant = "volcano" })

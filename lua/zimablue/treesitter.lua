@@ -13,6 +13,7 @@ local M = {}
 ---@param styles table|nil
 ---@param config table|nil
 function M.setup(palette, hl, fg, bold, italic, styles, config)
+  styles = styles or {}
 
   -- ======================================================================
   -- Base
@@ -22,7 +23,7 @@ function M.setup(palette, hl, fg, bold, italic, styles, config)
   -- ======================================================================
   -- Comments
   -- ======================================================================
-  hl("@comment",         { fg = palette.comment, italic = italic() })
+  hl("@comment",         vim.tbl_extend("force", { fg = palette.comment }, styles.comments or {}))
   hl("@comment.error",   { fg = palette.lava_red })
   hl("@comment.hint",    { fg = palette.zima_blue_light })
   hl("@comment.info",    { fg = palette.blue })
@@ -90,12 +91,12 @@ function M.setup(palette, hl, fg, bold, italic, styles, config)
   -- ======================================================================
   -- Functions
   -- ======================================================================
-  hl("@function",             { fg = palette.zima_blue })
-  hl("@function.builtin",     { fg = palette.zima_blue_light })
-  hl("@function.call",        { fg = palette.zima_blue })
-  hl("@function.macro",       { fg = palette.purple })
-  hl("@function.method",      { fg = palette.zima_blue })
-  hl("@function.method.call", { fg = palette.zima_blue })
+  hl("@function",             vim.tbl_extend("force", { fg = palette.zima_blue }, styles.functions or {}))
+  hl("@function.builtin",     vim.tbl_extend("force", { fg = palette.zima_blue_light }, styles.functions or {}))
+  hl("@function.call",        vim.tbl_extend("force", { fg = palette.zima_blue }, styles.functions or {}))
+  hl("@function.macro",       vim.tbl_extend("force", { fg = palette.purple }, styles.functions or {}))
+  hl("@function.method",      vim.tbl_extend("force", { fg = palette.zima_blue }, styles.functions or {}))
+  hl("@function.method.call", vim.tbl_extend("force", { fg = palette.zima_blue }, styles.functions or {}))
   hl("@constructor",          { fg = palette.zima_blue_bold })
   hl("@constructor.tsx",      { fg = palette.zima_blue })
   hl("@parameter",            { fg = palette.orange })
@@ -104,7 +105,7 @@ function M.setup(palette, hl, fg, bold, italic, styles, config)
   -- ======================================================================
   -- Variables
   -- ======================================================================
-  hl("@variable",                     { fg = palette.fg })
+  hl("@variable",                     vim.tbl_extend("force", { fg = palette.fg }, styles.variables or {}))
   hl("@variable.builtin",             { fg = palette.zima_blue_light, italic = italic() })
   hl("@variable.member",              { fg = palette.fg })
   hl("@variable.parameter",           { fg = palette.orange })
@@ -114,21 +115,21 @@ function M.setup(palette, hl, fg, bold, italic, styles, config)
   -- ======================================================================
   -- Keywords
   -- ======================================================================
-  hl("@keyword",                  { fg = palette.purple })
-  hl("@keyword.coroutine",        { fg = palette.purple })
-  hl("@keyword.function",         { fg = palette.blue, bold = bold() })
-  hl("@keyword.operator",         { fg = palette.zima_blue })
-  hl("@keyword.import",           { fg = palette.blue, italic = italic() })
-  hl("@keyword.type",             { fg = palette.cyan, italic = italic() })
-  hl("@keyword.modifier",         { fg = palette.blue })
-  hl("@keyword.repeat",           { fg = palette.purple })
-  hl("@keyword.return",           { fg = palette.purple, bold = bold() })
-  hl("@keyword.debug",            { fg = palette.sunset_orange })
-  hl("@keyword.exception",        { fg = palette.lava_red })
-  hl("@keyword.conditional",      { fg = palette.purple })
-  hl("@keyword.directive",        { fg = palette.purple })
-  hl("@keyword.directive.define", { fg = palette.purple })
-  hl("@keyword.storage",          { fg = palette.cyan })
+  hl("@keyword",                  vim.tbl_extend("force", { fg = palette.purple }, styles.keywords or {}))
+  hl("@keyword.coroutine",        vim.tbl_extend("force", { fg = palette.purple }, styles.keywords or {}))
+  hl("@keyword.function",         vim.tbl_extend("force", { fg = palette.blue, bold = bold() }, styles.keywords or {}))
+  hl("@keyword.operator",         vim.tbl_extend("force", { fg = palette.zima_blue }, styles.keywords or {}))
+  hl("@keyword.import",           vim.tbl_extend("force", { fg = palette.blue, italic = italic() }, styles.keywords or {}))
+  hl("@keyword.type",             vim.tbl_extend("force", { fg = palette.cyan, italic = italic() }, styles.keywords or {}))
+  hl("@keyword.modifier",         vim.tbl_extend("force", { fg = palette.blue }, styles.keywords or {}))
+  hl("@keyword.repeat",           vim.tbl_extend("force", { fg = palette.purple }, styles.keywords or {}))
+  hl("@keyword.return",           vim.tbl_extend("force", { fg = palette.purple, bold = bold() }, styles.keywords or {}))
+  hl("@keyword.debug",            vim.tbl_extend("force", { fg = palette.sunset_orange }, styles.keywords or {}))
+  hl("@keyword.exception",        vim.tbl_extend("force", { fg = palette.lava_red }, styles.keywords or {}))
+  hl("@keyword.conditional",      vim.tbl_extend("force", { fg = palette.purple }, styles.keywords or {}))
+  hl("@keyword.directive",        vim.tbl_extend("force", { fg = palette.purple }, styles.keywords or {}))
+  hl("@keyword.directive.define", vim.tbl_extend("force", { fg = palette.purple }, styles.keywords or {}))
+  hl("@keyword.storage",          vim.tbl_extend("force", { fg = palette.cyan }, styles.keywords or {}))
 
   -- ======================================================================
   -- Conditional / Repeat (explicit aliases)

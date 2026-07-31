@@ -19,6 +19,7 @@ local M = {}
 ---@field dim_inactive boolean Dim inactive windows
 ---@field italic     boolean Enable italics for comments
 ---@field bold       boolean Enable bold for some keywords
+---@field variant string|nil Theme variant used by the default colorscheme entrypoint
 ---@field styles table|nil Style overrides for syntax groups
 ---@field on_colors fun(colors: table)|nil Override color groups
 ---@field on_highlights fun(highlights: table, colors: table)|nil Override highlight groups
@@ -37,13 +38,6 @@ local config = {
 
 local C = require("zimablue.colors")
 
---- Wrapper for nvim_set_hl with optional overrides
----@param group string Highlight group name
----@param val   table  Highlight values
-local function hl(group, val)
-  vim.api.nvim_set_hl(0, group, val)
-end
-
 ---@return boolean
 local function bold()
   return config.bold
@@ -52,11 +46,6 @@ end
 ---@return boolean
 local function italic()
   return config.italic
-end
-
----@type fun(group: string, val: table)
-local function fg(group, val)
-  vim.api.nvim_set_hl(0, group, val)
 end
 
 --- Resolve the palette for a given variant (or default)
@@ -74,12 +63,12 @@ end
 ---@param opts ZimaBlueConfig|nil
 function M.setup(opts)
   opts = opts or {}
+  local load_variant = opts._variant
   config = vim.tbl_deep_extend("force", config, opts)
 
   -- Determine variant (from opts, fallback to default)
-  local variant = config.variant or "default"
+  local variant = load_variant or config.variant or "default"
   local palette = resolve_palette(variant)
-  config.variant = nil
 
   -- Reset and set name
   if vim.g.colors_name then
@@ -122,18 +111,22 @@ function M.setup(opts)
     variables = {},
   }, config.styles or {})
 
+  local highlights = {}
+  local function collect(group, value)
+    highlights[group] = value
+  end
+
   -- Load highlight modules in order
-  require("zimablue.highlights").setup(palette, hl, fg, bold, italic, styles, config)
-  require("zimablue.treesitter").setup(palette, hl, fg, bold, italic, styles, config)
-  require("zimablue.lsp").setup(palette, hl, fg, bold, italic, styles, config)
-  require("zimablue.plugins").setup(palette, hl, fg, bold, italic, styles, config)
+  require("zimablue.highlights").setup(palette, collect, collect, bold, italic, styles, config)
+  require("zimablue.treesitter").setup(palette, collect, collect, bold, italic, styles, config)
+  require("zimablue.lsp").setup(palette, collect, collect, bold, italic, styles, config)
+  require("zimablue.plugins").setup(palette, collect, collect, bold, italic, styles, config)
 
   -- Apply on_highlights callback
-  local highlights = {}
   config.on_highlights(highlights, palette)
 
   for group, value in pairs(highlights) do
-    hl(group, value)
+    vim.api.nvim_set_hl(0, group, value)
   end
 end
 
