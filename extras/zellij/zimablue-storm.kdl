@@ -1,0 +1,13 @@
+// zimablue-storm - generated from zimablue.nvim
+themes {
+  zimablue_storm {
+    fg "#C8D0D8"
+    bg "#080C10"
+    red "#B86868"
+    green "#78A880"
+    yellow "#B8A870"
+    blue "#5088B0"
+    magenta "#8A7898"
+    cyan "#489EA8"
+  }
+}

@@ -1,0 +1,24 @@
+# zimablue-volcano - generated from zimablue.nvim
+[colors]
+name=volcano
+foreground=#E0D0C8
+background=#0E0808
+cursor=#60B8E0
+selection_foreground=#0E0808
+selection_background=#3A1E14
+color0=#0E0808
+color1=#FF5544
+color2=#88A868
+color3=#E8B040
+color4=#60B8E0
+color5=#B080A0
+color6=#509898
+color7=#E0D0C8
+bright0=#68504A
+bright1=#DD3322
+bright2=#689048
+bright3=#C89028
+bright4=#38AAD8
+bright5=#906880
+bright6=#388080
+bright7=#F0E0D0

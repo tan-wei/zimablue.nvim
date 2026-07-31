@@ -1,0 +1,13 @@
+// zimablue-volcano - generated from zimablue.nvim
+themes {
+  zimablue_volcano {
+    fg "#E0D0C8"
+    bg "#0E0808"
+    red "#FF5544"
+    green "#88A868"
+    yellow "#E8B040"
+    blue "#6898C0"
+    magenta "#B080A0"
+    cyan "#509898"
+  }
+}

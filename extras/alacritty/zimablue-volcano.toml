@@ -1,0 +1,32 @@
+# zimablue-volcano - generated from zimablue.nvim
+[colors.primary]
+background = "#0E0808"
+foreground = "#E0D0C8"
+
+[colors.cursor]
+text = "#0E0808"
+cursor = "#60B8E0"
+
+[colors.selection]
+text = "#0E0808"
+background = "#3A1E14"
+
+[colors.normal]
+black = "#0E0808"
+red = "#FF5544"
+green = "#88A868"
+yellow = "#E8B040"
+blue = "#60B8E0"
+magenta = "#B080A0"
+cyan = "#509898"
+white = "#E0D0C8"
+
+[colors.bright]
+black = "#68504A"
+red = "#DD3322"
+green = "#689048"
+yellow = "#C89028"
+blue = "#38AAD8"
+magenta = "#906880"
+cyan = "#388080"
+white = "#F0E0D0"

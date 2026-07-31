@@ -1,0 +1,24 @@
+# zimablue - generated from zimablue.nvim
+[colors]
+name=default
+foreground=#D4D6E0
+background=#070B15
+cursor=#5BC2E7
+selection_foreground=#070B15
+selection_background=#1E3555
+color0=#070B15
+color1=#E06C75
+color2=#98C379
+color3=#E5C07B
+color4=#5BC2E7
+color5=#C678DD
+color6=#56B6C2
+color7=#D4D6E0
+bright0=#565E78
+bright1=#BE5046
+bright2=#7EC97E
+bright3=#D4A04A
+bright4=#28C5F4
+bright5=#D47DDA
+bright6=#74BFC7
+bright7=#E8EAF0

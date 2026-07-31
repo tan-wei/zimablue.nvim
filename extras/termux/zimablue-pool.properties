@@ -1,0 +1,24 @@
+# zimablue-pool - generated from zimablue.nvim
+[colors]
+name=pool
+foreground=#D0DEE0
+background=#060E12
+cursor=#50C8E8
+selection_foreground=#060E12
+selection_background=#1E363E
+color0=#060E12
+color1=#D06C78
+color2=#82D0A0
+color3=#D8C878
+color4=#50C8E8
+color5=#A890C0
+color6=#4EC0C8
+color7=#D0DEE0
+bright0=#506268
+bright1=#B85060
+bright2=#66B888
+bright3=#C0B060
+bright4=#28B8DC
+bright5=#9070A8
+bright6=#38A0B0
+bright7=#E8F0F0

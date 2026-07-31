@@ -1,0 +1,13 @@
+// zimablue-pool - generated from zimablue.nvim
+themes {
+  zimablue_pool {
+    fg "#D0DEE0"
+    bg "#060E12"
+    red "#D06C78"
+    green "#82D0A0"
+    yellow "#D8C878"
+    blue "#58A8D0"
+    magenta "#A890C0"
+    cyan "#4EC0C8"
+  }
+}

@@ -1,0 +1,7 @@
+# zimablue-pool - generated from zimablue.nvim
+gui:
+  theme:
+    activeBorderColor: ['#50C8E8', bold]
+    inactiveBorderColor: ['#1E3238']
+    selectedLineBgColor: ['#16282E']
+    defaultFgColor: ['#D0DEE0']

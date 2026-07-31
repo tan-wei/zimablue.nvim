@@ -1,0 +1,7 @@
+# zimablue-storm - generated from zimablue.nvim
+gui:
+  theme:
+    activeBorderColor: ['#4AA8C8', bold]
+    inactiveBorderColor: ['#1A2634']
+    selectedLineBgColor: ['#18222C']
+    defaultFgColor: ['#C8D0D8']

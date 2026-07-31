@@ -1,0 +1,32 @@
+# zimablue-sunset - generated from zimablue.nvim
+[colors.primary]
+background = "#0F0B08"
+foreground = "#E0D6CC"
+
+[colors.cursor]
+text = "#0F0B08"
+cursor = "#6BC8F0"
+
+[colors.selection]
+text = "#0F0B08"
+background = "#3D2A1A"
+
+[colors.normal]
+black = "#0F0B08"
+red = "#E07060"
+green = "#A8C888"
+yellow = "#F0C060"
+blue = "#6BC8F0"
+magenta = "#C890D0"
+cyan = "#6AA8B8"
+white = "#E0D6CC"
+
+[colors.bright]
+black = "#6A5E52"
+red = "#CC5040"
+green = "#88B868"
+yellow = "#D8A840"
+blue = "#3DB8EE"
+magenta = "#B070B8"
+cyan = "#5098A8"
+white = "#F0E8DC"

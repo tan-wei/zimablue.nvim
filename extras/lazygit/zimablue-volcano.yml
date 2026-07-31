@@ -1,0 +1,7 @@
+# zimablue-volcano - generated from zimablue.nvim
+gui:
+  theme:
+    activeBorderColor: ['#60B8E0', bold]
+    inactiveBorderColor: ['#3A1A10']
+    selectedLineBgColor: ['#2A1412']
+    defaultFgColor: ['#E0D0C8']

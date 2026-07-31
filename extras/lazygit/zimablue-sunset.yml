@@ -1,0 +1,7 @@
+# zimablue-sunset - generated from zimablue.nvim
+gui:
+  theme:
+    activeBorderColor: ['#6BC8F0', bold]
+    inactiveBorderColor: ['#3A2818']
+    selectedLineBgColor: ['#2A1E15']
+    defaultFgColor: ['#E0D6CC']

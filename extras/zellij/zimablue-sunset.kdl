@@ -1,0 +1,13 @@
+// zimablue-sunset - generated from zimablue.nvim
+themes {
+  zimablue_sunset {
+    fg "#E0D6CC"
+    bg "#0F0B08"
+    red "#E07060"
+    green "#A8C888"
+    yellow "#F0C060"
+    blue "#7CB8E8"
+    magenta "#C890D0"
+    cyan "#6AA8B8"
+  }
+}
